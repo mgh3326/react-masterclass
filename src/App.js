@@ -17,6 +17,9 @@ const rotationAnimation = keyframes`
         border-radius: 0px;
     }
 `
+const Emoji = styled.p`
+    font-size: 36px;
+`
 const Box = styled.div`
     height: 200px;
     width: 200px;
@@ -26,11 +29,9 @@ const Box = styled.div`
     align-items: center;
     animation: ${rotationAnimation} 1s linear infinite;
 
-    span {
-        font-size: 36px;
-
+    ${Emoji} {
         &:hover {
-            font-size: 48px;
+            font-size: 98px;
         }
 
         &:active {
@@ -42,8 +43,9 @@ const Box = styled.div`
 function App() {
     return <Wraper>
         <Box>
-            <span>ㅋ</span>
+            <Emoji>ㅋ</Emoji>
         </Box>
+            <Emoji>ㅎ</Emoji>
     </Wraper>;
 }
 
