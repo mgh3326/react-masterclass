@@ -1,31 +1,24 @@
 import styled from "styled-components";
 
 const Title = styled.h1`
-    color: tomato;
+    color: ${(props) => props.theme.textColor};
+`;
 
-    &:hover {
-        color: teal;
-    }
-`
 const Wrapper = styled.div`
     display: flex;
     height: 100vh;
-    width: 10vw;
+    width: 100vw;
     justify-content: center;
     align-items: center;
-
-    ${Title}:hover & {
-        font-size: 99px;
-    }
+    background-color: ${(props) => props.theme.backgroundColor};
 `;
 
-
 function App() {
-    return <Wrapper>
-        <Title>
-            Hello
-        </Title>
-    </Wrapper>;
+    return (
+        <Wrapper>
+            <Title>Hello</Title>
+        </Wrapper>
+    );
 }
 
 export default App;
